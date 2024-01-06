@@ -1,5 +1,3 @@
-#include "../include/ExampleHeader.h"
-
 #include <iostream>
 
 int main()
