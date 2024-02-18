@@ -17,7 +17,7 @@ project "ProjectName"
 
     links
     {
-        "Walnut"
+		-- Library links
     }
 
    targetdir ("../bin/" .. outputdir .. "/%{prj.name}")
