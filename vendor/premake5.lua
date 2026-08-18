@@ -1,16 +1,12 @@
 project "ExampleLib"
+	location "projects/ExampleLib"
 	kind "StaticLib"
 	language "C++"
     staticruntime "off"
+	targetdir ("../bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("../bin-int/" .. outputdir .. "/%{prj.name}")
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-
-	files
-	{
-		"Test.h",
-		"Test.cpp"
-	}
+	files { "Test.h", "Test.cpp" }
 
 	filter "system:windows"
 		systemversion "latest"
